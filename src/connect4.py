@@ -128,12 +128,10 @@ class connect4(object):
 						nextDepth = d-1
 						alpha = -self.minimax(tempBoard, nextDepth, 1)['alpha']
 				else:
-					if(d == 1):
-						alpha = tempBoard.scoreBoard(p)
-					else:
+					alpha = tempBoard.scoreBoard(p)
+					if(d > 1 and alpha < 1000):
 						nextDepth = d-1
 						alpha = self.minimax(tempBoard, nextDepth, 2)['alpha']
-				print(alpha)
 				if(alpha == bestAlpha):
 					bestMoves.insert(0,i)
 				elif(alpha > bestAlpha):

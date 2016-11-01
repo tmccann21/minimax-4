@@ -1,7 +1,7 @@
 # minimax-4
 A minimax algorithm implementation written in python.
 
-Usage
+Usages
 
 piece positions denoted by  "[x][y][player]|"
 
